@@ -2,6 +2,7 @@ using System;
 
 class Program
 {
+    
     static int BinToDec(string binary)
     {
         return Convert.ToInt32(binary, 2);
@@ -24,6 +25,7 @@ class Program
 
     static void Main(string[] args)
     {
+        Start:
         while (true)
         {
             Console.WriteLine("\nWählen Sie eine Option:");
@@ -36,34 +38,71 @@ class Program
             Console.Write("Ihre Auswahl: ");
             string choice = Console.ReadLine();
 
-            switch (choice)
+            if (choice == "1")
             {
-                case "1":
-                    Console.Write("Geben Sie die Binärzahl ein: ");
-                    string binaryInput = Console.ReadLine();
-                    Console.WriteLine("Ergebnis: " + BinToDec(binaryInput));
-                    break;
-                case "2":
-                    Console.Write("Geben Sie die Dezimalzahl ein: ");
+                try
+                {
+                Console.Write("Geben Sie die Binärzahl ein: ");
+                string binaryInput = Console.ReadLine();
+                Console.WriteLine("Ergebnis: " + BinToDec(binaryInput));
+                }
+                catch
+                {
+                    Console.WriteLine("Ungültige Auswahl. Bitte wählen Sie erneut.");
+                    goto Start;
+                }
+            }
+            else if (choice == "2")
+            {
+                Console.Write("Geben Sie die Dezimalzahl ein: ");
+                try
+                {
                     int decimalInput = int.Parse(Console.ReadLine());
                     Console.WriteLine("Ergebnis: " + DecToBin(decimalInput));
-                    break;
-                case "3":
+                }
+                catch
+                {
+                    Console.WriteLine("Ungültige Auswahl. Bitte wählen Sie erneut.");
+                    goto Start;
+                }
+            }
+            else if (choice == "3")
+            {
+                try
+                {
                     Console.Write("Geben Sie die Hexadezimalzahl ein: ");
                     string hexInput = Console.ReadLine();
                     Console.WriteLine("Ergebnis: " + HexToDec(hexInput));
-                    break;
-                case "4":
-                    Console.Write("Geben Sie die Dezimalzahl ein: ");
-                    int decimalInput2 = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Ergebnis: " + DecToHex(decimalInput2));
-                    break;
-                case "5":
-                    Console.WriteLine("Auf Wiedersehen!");
-                    return;
-                default:
+                }
+                catch
+                {
                     Console.WriteLine("Ungültige Auswahl. Bitte wählen Sie erneut.");
-                    break;
+                    goto Start;
+                }
+            }
+            else if (choice == "4")
+            {
+                try
+                {
+                Console.Write("Geben Sie die Dezimalzahl ein: ");
+                int decimalInput2 = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ergebnis: " + DecToHex(decimalInput2));
+                }
+                catch
+                {
+                    Console.WriteLine("Ungültige Auswahl. Bitte wählen Sie erneut.");
+                    goto Start;
+                }
+            }
+            else if (choice == "5")
+            {
+                Console.WriteLine("Auf Wiedersehen!");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Ungültige Auswahl. Bitte wählen Sie erneut.");
+                goto Start;
             }
         }
     }
