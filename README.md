@@ -74,13 +74,10 @@ Ich habe mich dazu entschieden ein Projekt zu machen, bei welchem man normale Za
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
-| 1.1  | 12.01.24      |  OK        | Cedric |
-| 2.1  | 12.01.24      |  OK        | Cedric |
-| 3.1  | 12.01.24      |  OK        | Cedric       |
-| 4.1  | 12.01.24      |  OK        | Cedric        |
-| 5.1  | 12.01.24      |  OK        | Cedric        |
-| 6.1  | 12.01.24      |  OK        | Cedric        |
-| 7.1  | 12.01.24      |  OK        | Cedric        |
+| 1.1  | 23.02.24 | OK | Cedric |
+| 2.1  | 23.02.24 | OK | Cedric |
+| 3.1  | 23.02.24 | OK | Cedric |
+| 4.1  | 23.02.24 | OK | Cedric |
 
 Es gab keine Probleme und alles wurde richtig implementiert.
 
